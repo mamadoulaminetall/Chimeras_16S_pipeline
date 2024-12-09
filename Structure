@@ -1,0 +1,19 @@
+16s-chimera-pipeline/
+├── config/              # Fichiers de configuration
+│   └── config.yaml
+├── data/                # Données d'entrée (séquences 16S)
+├── docker-compose.yml   # Orchestration Docker
+├── Dockerfile           # Construction de l'environnement
+├── envs/                # Environnements conda pour chaque étape
+│   ├── detection.yaml
+│   └── visualisation.yaml
+├── rules/               # Étapes du pipeline Snakemake
+│   ├── preprocessing.smk
+│   ├── chimera_detection.smk
+│   ├── visualization.smk
+│   └── analysis.smk
+├── scripts/             # Scripts Python/R pour l'analyse et visualisation
+│   ├── detect_chimeras.py
+│   └── visualize_recombinations.R
+├── Snakefile            # Fichier principal du pipeline
+└── results/             # Résultats générés par le pipeline
